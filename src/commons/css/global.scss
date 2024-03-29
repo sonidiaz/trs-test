@@ -1,0 +1,8 @@
+.inf-rtve-fullwidth{
+  left: calc(-1* (((100vw + 2rem) - 108rem) / 2));
+  width: calc(100vw);
+  position: relative;
+  margin-right: calc(-1* (((100vw + 2rem) - 108rem) / 2));
+  margin-bottom: 2rem;
+  padding-bottom: 6rem;
+}

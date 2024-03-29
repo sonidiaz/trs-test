@@ -1,0 +1,22 @@
+@import url(./global.scss);
+[class*="inf-videoscrolling"] {
+  background-color: white;
+  h3{
+    display: block;
+    font-size: 2rem;
+    margin: 1rem 0;
+  }
+  h4{
+    display: block;
+    font-size: 1.4rem;
+    margin: 1rem 0;
+  }
+  p{
+    line-height: 2.5rem;
+    padding: 0;
+    color: black;
+  }
+  .text_white{
+    color: white;
+  }
+}
