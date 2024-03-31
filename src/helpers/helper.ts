@@ -45,7 +45,7 @@ export function isMobileQuery (){
 
 export const returnPath = () => {
     if(import.meta.env.MODE === 'production') {
-        return import.meta.env.VITE_RTVE_PATH
+        return import.meta.env.VITE_TRS_PATH
     }
     return '.'
 }

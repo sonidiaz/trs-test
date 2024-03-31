@@ -1,0 +1,259 @@
+{
+  "questions": [
+    {
+      "question": "Físico",
+      "options": [
+        {
+          "response": "Mi cuerpo es delgado y me cuesta ganar peso",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Tengo un cuerpo mediano, atlético y gano o pierdo peso con facilidad",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Mi cuerpo es sólido y robusto, gano peso fácilmente",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Temperatura corporal",
+      "options": [
+        {
+          "response": "Mis manos y pies suelen estar fríos",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Tengo calor fácilmente, prefiero climas más fríos",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Tardo en sentir calor, disfruto del calor",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Apetito",
+      "options": [
+        {
+          "response": "Mi apetito varía, a menudo me olvido de comer",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Tengo un apetito fuerte; si no como, me irrito",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Mi apetito es constante, pero no suelo tener hambre",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Digestión",
+      "options": [
+        {
+          "response": "Tengo digestión irregular y gases",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Tengo buena digestión, pero a veces puedo tener acidez",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Mi digestión es lenta; me siento pesado después de comer",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Sueño",
+      "options": [
+        {
+          "response": "Mi sueño es ligero e interrumpido",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Duermo bien, pero si me despierto es difícil volver a dormir",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Mi sueño es profundo y largo",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Actividad física",
+      "options": [
+        {
+          "response": "Soy activo, pero me canso fácilmente",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Disfruto de desafíos y competiciones",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Me muevo lentamente, prefiero actividades calmadas",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Estado mental",
+      "options": [
+        {
+          "response": "Tiendo a preocuparme y soy indeciso",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Soy preciso y me irrito fácilmente",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Soy tranquilo y me cuesta motivarme",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Adaptabilidad",
+      "options": [
+        {
+          "response": "Me adapto rápidamente, pero me estreso fácilmente",
+          "dosha": "Vata"
+        },
+        {
+          "response": "No me gusta el cambio, prefiero la consistencia",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Me adapto lentamente pero con facilidad",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Cabello",
+      "options": [
+        {
+          "response": "Tengo el cabello seco o quebradizo",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Tengo el cabello fino, con tendencia a la calvicie o canas tempranas",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Tengo el cabello grueso y oleoso",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Piel",
+      "options": [
+        {
+          "response": "Mi piel es seca y áspera",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Mi piel es sensible y propensa a la irritación",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Mi piel es suave y grasosa",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Tolerancia al clima",
+      "options": [
+        {
+          "response": "No tolero el frío",
+          "dosha": "Vata"
+        },
+        {
+          "response": "No tolero el calor",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "No tolero el clima húmedo y frío",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Memoria",
+      "options": [
+        {
+          "response": "Aprendo rápido pero olvido fácilmente",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Tengo buena memoria y soy detallista",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Aprendo lentamente pero recuerdo a largo plazo",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Hábitos alimenticios",
+      "options": [
+        {
+          "response": "Prefiero comidas calientes y reconfortantes",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Prefiero comidas picantes y refrescantes",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Disfruto de comidas dulces y estables",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Habilidades de comunicación",
+      "options": [
+        {
+          "response": "Hablo rápido y a veces me disperso ",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Hablo de manera directa y puedo ser crítico",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Hablo con calma y soy un buen oyente",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Emociones predominantes",
+      "options": [
+        {
+          "response": "Suelo sentirme ansioso o temeroso",
+          "dosha": "Vata"
+        },
+        {
+          "response": "Me irrito o me enojo fácilmente",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "Tiendo a sentirme apegado y resistente al cambio",
+          "dosha": "Kapha"
+        }
+      ]
+    }
+  ]
+}

@@ -2,7 +2,6 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import { ListCmp } from './Interfaces/Interfaces.ts';
 import {isMobileQuery} from "./helpers/helper.ts"
-import PapaGameContainer from './components/PapaGame/PapaGameContainer.tsx';
 import { DoshaSurveysContainer } from './components/DoshaSurveys/DoshaSurveysContainer.tsx';
 
 
