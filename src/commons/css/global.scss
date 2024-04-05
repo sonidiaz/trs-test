@@ -1,8 +1,50 @@
-.inf-rtve-fullwidth{
-  left: calc(-1* (((100vw + 2rem) - 108rem) / 2));
-  width: calc(100vw);
-  position: relative;
-  margin-right: calc(-1* (((100vw + 2rem) - 108rem) / 2));
-  margin-bottom: 2rem;
-  padding-bottom: 6rem;
+
+.trs-body-landing{
+  background-color: #0f0f0f;
+  .trs-wrapper{
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  header{
+    display: flex;
+    justify-content: center;
+    background-color: #0f0f0f;
+    padding: 2rem;
+    .logo-header{
+      width: 200px;
+      img{
+        width: 100%;
+      }
+    }
+  }
+  .trs-hero{
+    text-align: center;
+    h2{
+      font-size: 2rem;
+    }
+    p{
+      width: 90%;
+      text-align: center;
+      margin: 0 auto;
+    }
+  }
+}
+.trs-action-button{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  &:hover{
+    border: 1px solid white;
+  }
+}
+.trs-wrapper-popup{
+  position: absolute;
+  width: 100%;
+  height:auto;
+  background-color: #0c0c0c;
+  top: 0;
+  left: 0;
+  z-index: 33;
+  padding-bottom: 60px;
 }
