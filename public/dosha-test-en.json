@@ -1,0 +1,259 @@
+{
+  "questions": [
+    {
+      "question": "Physique",
+      "options": [
+        {
+          "response": "My body is slim, and I struggle to gain weight",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I have a medium, athletic build and can gain or lose weight easily",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "My body is solid and stout; I gain weight easily",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Body Temperature",
+      "options": [
+        {
+          "response": "My hands and feet are usually cold",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I heat up easily, prefer cooler climates",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "I am slow to heat up, enjoy warm climates",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Appetite",
+      "options": [
+        {
+          "response": "My appetite varies, often forgetting to eat",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I have a strong appetite; if I don't eat, I get irritable",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "My appetite is steady, but I don't often feel hungry",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Digestion",
+      "options": [
+        {
+          "response": "I have irregular digestion and gas",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I have good digestion, but sometimes experience acidity",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "My digestion is slow; I feel heavy after eating",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Sleep",
+      "options": [
+        {
+          "response": "My sleep is light and interrupted",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I sleep well, but if woken up, it's hard to fall back asleep",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "My sleep is deep and long",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Physical Activity",
+      "options": [
+        {
+          "response": "I am active but tire easily",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I enjoy challenges and competition",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "I move slowly, preferring calm activities",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Mental State",
+      "options": [
+        {
+          "response": "I tend to worry and am indecisive",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I am precise and can be easily irritated",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "I am calm and take time to get motivated",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Adaptability",
+      "options": [
+        {
+          "response": "I adapt quickly but get stressed easily",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I dislike change, preferring consistency",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "I adapt slowly but easily",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Hair",
+      "options": [
+        {
+          "response": "My hair is dry or brittle",
+          "dosha": "Vata"
+        },
+        {
+          "response": "My hair is fine, prone to early balding or graying",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "My hair is thick and oily",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Skin",
+      "options": [
+        {
+          "response": "My skin is dry and rough",
+          "dosha": "Vata"
+        },
+        {
+          "response": "My skin is sensitive and prone to irritation",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "My skin is soft and oily",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Climate Tolerance",
+      "options": [
+        {
+          "response": "I cannot tolerate cold",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I cannot tolerate heat",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "I cannot tolerate damp and cold weather",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Memory",
+      "options": [
+        {
+          "response": "I learn quickly but forget easily",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I have a good memory and am detail-oriented",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "I learn slowly but remember for a long time",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Eating Habits",
+      "options": [
+        {
+          "response": "I prefer warm and comforting meals",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I prefer spicy and refreshing meals",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "I enjoy sweet and stable meals",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Communication Skills",
+      "options": [
+        {
+          "response": "I speak quickly and can be scattered",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I speak directly and can be critical",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "I speak calmly and am a good listener",
+          "dosha": "Kapha"
+        }
+      ]
+    },
+    {
+      "question": "Dominant Emotions",
+      "options": [
+        {
+          "response": "I often feel anxious or fearful",
+          "dosha": "Vata"
+        },
+        {
+          "response": "I get irritated or angry easily",
+          "dosha": "Pitta"
+        },
+        {
+          "response": "I tend to feel attached and resistant to change",
+          "dosha": "Kapha"
+        }
+      ]
+    }
+  ]
+}
