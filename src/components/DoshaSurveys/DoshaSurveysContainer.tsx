@@ -41,7 +41,7 @@ export const DoshaSurveysContainer = () => {
   useEffect(() => {
     const getData = async () => {
       setLoadingTest(true)
-      const response = await fetch(`${returnPath()}/dosha-test-esp.json`);
+      const response = await fetch(`${returnPath()}/dosha-test-en.json`);
       const doshaTypes = await fetch(`${returnPath()}/dosha-test-details.json`);
       const data = await response.json();
       const dataDosha = await doshaTypes.json();
@@ -71,9 +71,7 @@ export const DoshaSurveysContainer = () => {
 
   const handleNext = () => {
     isLastStep() && !allStepsCompleted()
-        ? // It's the last step, but not all steps have been completed,
-          // find the first step that has been completed
-          questions.findIndex((_, i) => !(i in completed))
+        ? questions.findIndex((_, i) => !(i in completed))
         : activeStep + 1;
     setActiveStep((prevActiveStep) => prevActiveStep + 1);
   };
@@ -88,7 +86,11 @@ export const DoshaSurveysContainer = () => {
       updatedDoshas[activeStep] = dosha; // Guardamos la selección para este paso
       return updatedDoshas;
     });
-    // handleNext();
+    if(activeStep < maxSteps - 1) {
+      setTimeout(() => {
+        handleNext();
+      }, 600)
+    }
   };
 
   const handleSubmit = (e:any) => {
@@ -186,11 +188,10 @@ export const DoshaSurveysContainer = () => {
                           <Card
                             variant="outlined"
                             sx={{
-                              height: '168px',
-                              backgroundColor: selectedDoshas[activeStep] === option.dosha ? '#424141' : 'inherit' // Aplicamos un fondo diferente si esta opción está seleccionada
+                              height: '168px'
                             }}
                             onClick={() => handleOptionClick(option.dosha)}
-                            className='trs-action-button'
+                            className={`trs-action-button ${selectedDoshas[activeStep] === option.dosha ? 'active' : '' }`}
                           >
                             <CardContent>
                               <Typography variant="h6" component="span">
