@@ -6,7 +6,8 @@ import Button from '@mui/material/Button';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import CloseIcon from '@mui/icons-material/Close';
-import { ThemeProvider, createTheme } from '@mui/material/styles';
+import { ThemeProvider } from '@mui/material/styles';
+import createTheme from "@mui/material/styles/createTheme";
 import CssBaseline from '@mui/material/CssBaseline';
 import '../../commons/css/global.scss'
 
