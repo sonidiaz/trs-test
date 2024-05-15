@@ -10,6 +10,8 @@ import { ThemeProvider } from '@mui/material/styles';
 import createTheme from "@mui/material/styles/createTheme";
 import CssBaseline from '@mui/material/CssBaseline';
 import '../../commons/css/global.scss'
+import ResultDosha from './ResultDosha';
+import { SuccessPage } from './SuccessPage';
 
 const darkTheme = createTheme({
   palette: {
@@ -30,14 +32,15 @@ export const DoshaSurveysContainer = () => {
   const [start, setStart] = useState(true)
   const [name, setname] = useState('')
   const [doshaWinner, setDoshaWinner] = useState<string | undefined>('')
-  const [completed] = useState<{
-    [k: number]: boolean;
-  }>({});
+  const [completed] = useState<{[k: number]: boolean;}>({});
   const [doshaTypes, setDoshaTypes] = useState<any>()
   const [currentDoshaTypes, setcurrentDoshaTypes] = useState('')
   const [displayPopup, setdisplayPopup] = useState(false)
 
+  const [desabledButton, setDesabledButton] = useState(false)
+
   const [, setLoadingTest] = useState(false)
+  const [useStateSuccess, setSuccessPageDisplay] = useState(false)
 
   useEffect(() => {
     const getData = async () => {
@@ -50,6 +53,9 @@ export const DoshaSurveysContainer = () => {
       setMaxSteps(data.questions.length);
       setDoshaTypes(dataDosha)
       setLoadingTest(false)
+      setdisplayPopup(true)
+      setDoshaWinner('pitta')
+      setcurrentDoshaTypes(`<h3>Diet:</h3> People with a Pitta constitution should prefer cool, moderately heavy, and less oily foods. Consume more green leafy vegetables, sweet fruits, and avoid spicy, sour, and salty foods. Fresh dairy products like yogurt can be beneficial. - <h3>Lifestyle and Exercise:</h3> Cooling and relaxing activities are best. Exercise should be performed during the cooler parts of the day. Water sports or walking in nature are ideal. Yoga poses like Moon salutation (Chandra Namaskar) are recommended. - <h3>Stress Management:</h3> Meditation and breathing techniques like Shitali Pranayama can help cool the body and mind. Taking time to relax and enjoy nature promotes Pitta balance. - <h3>Daily Routines:</h3> Avoid extreme heat and seek shade during summer. Use cooling essential oils like sandalwood and rose on the skin.'`)
     };
     getData();
   }, []);
@@ -71,6 +77,7 @@ export const DoshaSurveysContainer = () => {
   };
 
   const handleNext = () => {
+    setDesabledButton(false)
     isLastStep() && !allStepsCompleted()
         ? questions.findIndex((_, i) => !(i in completed))
         : activeStep + 1;
@@ -78,18 +85,21 @@ export const DoshaSurveysContainer = () => {
   };
 
   const handleBack = () => {
+    setDesabledButton(false)
     setActiveStep((prevActiveStep) => prevActiveStep - 1);
   };
 
   const handleOptionClick = (dosha: string) => {
+    setDesabledButton(true)
     setSelectedDoshas((prevDoshas) => {
       const updatedDoshas = [...prevDoshas];
-      updatedDoshas[activeStep] = dosha; // Guardamos la selección para este paso
+      updatedDoshas[activeStep] = dosha; 
       return updatedDoshas;
     });
     if(activeStep < maxSteps - 1) {
       setTimeout(() => {
         handleNext();
+        setDesabledButton(false)
       }, 600)
     }
   };
@@ -118,11 +128,14 @@ export const DoshaSurveysContainer = () => {
         highestFrequency = countDoshas[dosha];
       }
     }
+
     setDoshaWinner(mostRepeatedDosha)
     setcurrentDoshaTypes(doshaTypes[mostRepeatedDosha])
     setdisplayPopup(true)
   }
-
+  const handleFinishTest2 = () =>{
+    setSuccessPageDisplay(true)
+  }
   return (
     <ThemeProvider theme={darkTheme}>
       <CssBaseline />
@@ -136,41 +149,61 @@ export const DoshaSurveysContainer = () => {
                   setSelectedDoshas([])
                   setDoshaWinner('')
                   setActiveStep(0)
+                  setSuccessPageDisplay(false)
+                  setDesabledButton(false)
                 }} aria-label="delete" size="small">
                   <CloseIcon fontSize="inherit" />
                 </IconButton>
+                {
+                  !useStateSuccess && (
+                    <ResultDosha handleClick={handleFinishTest2}/>
+                  )
+                }
               </Box>
-              <Box display="flex" alignItems={'center'} flexDirection={"column"}>
-                <h2>¡Thanks {name} for complete our test! </h2>
-                <h3>Your Dosha type is: {doshaWinner}</h3>
-                <p dangerouslySetInnerHTML={{__html: currentDoshaTypes}}></p>
-              </Box>
+              {
+                useStateSuccess && (
+                  <SuccessPage 
+                    name={name}
+                    doshaWinnerProp={doshaWinner}
+                    currentDoshaTypes={currentDoshaTypes}
+                  />
+                )
+              }
             </Container>
           </div>
         )
       }
-      <Container sx={{padding: '20px 0'}}>
+      <Container maxWidth="lg" sx={{ py: 10 }}>
+        <div className='trs-bg-image' style={{backgroundImage: `url(https://thairoomspa.com/wp-content/uploads/2020/07/Imagen-destacada_tratamiento.jpg)`}}></div>
         {
           start ? (
-            <Container maxWidth="sm">
+            <>
               <Box>
-                <form onSubmit={handleSubmit}>
-                  <FormControl fullWidth sx={{ m: 1 }} variant="standard">
-                    <InputLabel htmlFor="standard-adornment-amount">Your Name</InputLabel>
-                    <Input
-                      value={name}
-                      id="standard-adornment-amount"
-                      onChange={(e:React.ChangeEvent) => {
-                        handleChange(e)
-                      }}
-                    />
-                    <Button type='submit'> Take the Quiz</Button>
-                  </FormControl>
-                </form>
+                <div className="trs-hero">
+                  <h2>What is your dosha?</h2>
+                  <p>
+                    Ayurveda believes our bodies are governed by three doshas or energies that define your physical, mental & emotional characteristics. Knowing your dosha type helps you find your personalised skin care and lifestyle routine for a healthier, balanced life.
+                  </p>
+                </div>
+                <Box sx={{ maxWidth: '60%', py: 2, mx:'auto' }}>
+                  <form onSubmit={handleSubmit}> 
+                    <FormControl fullWidth sx={{ m: 1 }} variant="standard">
+                      <TextField
+                        label="Name"
+                        id="standard-adornment-amount"
+                        variant="filled" 
+                        onChange={(e:React.ChangeEvent) => {
+                          handleChange(e)
+                        }}
+                      />
+                      <Button type='submit'> Take the Quiz</Button>
+                    </FormControl>
+                  </form>
+                </Box>
               </Box>
-            </Container>
+            </>
           ) : (
-            <Container sx={{ maxWidth: 900, flexGrow: 1, display: displayPopup ? 'none' : 'block' }} >
+            <>
               <Box sx={{ width: '100%', py: 2 }}>
                 {questions.length && (
                   <>
@@ -192,7 +225,7 @@ export const DoshaSurveysContainer = () => {
                               height: '168px'
                             }}
                             onClick={() => handleOptionClick(option.dosha)}
-                            className={`trs-action-button ${selectedDoshas[activeStep] === option.dosha ? 'active' : '' }`}
+                            className={`trs-action-button ${selectedDoshas[activeStep] === option.dosha ? 'active' : '' } ${desabledButton ? 'disabled' : ''}`}
                           >
                             <CardContent>
                               <Typography variant="h6" component="span">
@@ -228,7 +261,7 @@ export const DoshaSurveysContainer = () => {
                   </Button>
                 }
               />
-            </Container>
+            </>
           )
         }
       </Container>
