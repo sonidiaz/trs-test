@@ -1,10 +1,10 @@
 
 .trs-body-landing{
   background-color: #0f0f0f;
-  .trs-wrapper{
-    max-width: 900px;
-    margin: 0 auto;
-  }
+  // .trs-wrapper{
+  //   max-width: 1900px;
+  //   margin: 0 auto;
+  // }
   header{
     display: flex;
     justify-content: center;
@@ -68,4 +68,20 @@
   left: 0;
   z-index: 33;
   padding-bottom: 60px;
+}
+.trs-action-button{
+  &.disabled{
+    pointer-events: none;
+  }
+}
+.trs-bg-image{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  background-position: center center;
+  opacity: 0.3;
 }
